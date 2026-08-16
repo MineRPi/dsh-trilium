@@ -118,10 +118,13 @@ npm test            # node --test tests/
 - token 只存本机 `~/.dsh/dsh-trilium.json`（0600）；工具输出原样返回，可能含笔记内容
 - 卸载：`dsh plugin --profile web remove dsh-trilium`
 
-## 上架
+## 上架状态
 
-发布到 npm 后，到 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)
-提一个条目 PR，DSH 插件市场（dshmarket）会自动收录。
+- npm：`dsh-trilium@0.1.0` 已发布 ✅
+- awesome-dsh-plugin PR：[#1045](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/1045) 已提交，等待合并（收录中）
+- 收录流程：发布 npm → 在 `data/plugins/` 加 YAML 条目 → 运行
+  `node scripts/generate-readme.mjs` 生成双 README → 提 PR → 合并后
+  dshmarket 自动收录
 
 ## License
 
