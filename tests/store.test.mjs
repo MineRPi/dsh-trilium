@@ -79,3 +79,14 @@ test('toView never leaks the token', () => {
   assert.equal('token' in view, false)
   assert.equal(view.tokenSet, true)
 })
+import { statSync } from 'node:fs'
+
+test('writeConfig writes atomically with 0600 permissions', () => {
+  withSandbox(() => {
+    const config = readConfig()
+    config.token = 'secret'
+    writeConfig(config)
+    const mode = statSync(storePath()).mode & 0o777
+    assert.equal(mode, 0o600)
+  })
+})
