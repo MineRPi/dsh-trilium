@@ -1,0 +1,56 @@
+/** Locale copy for the dsh-trilium surfaces (Chinese only by decision). */
+/** Chinese copy (the plugin's UI language). */
+export declare const zh: {
+    'settings.expand': string;
+    'settings.collapse': string;
+    'settings.notExposed': string;
+    'settings.unsaved': string;
+    'settings.readOnly': string;
+    'settings.saveFailed': string;
+    'settings.discard': string;
+    'settings.save': string;
+    'settings.saved': string;
+    'settings.saving': string;
+    'settings.overridden': string;
+    'settings.reset': string;
+    'settings.inherit': string;
+    'settings.on': string;
+    'settings.off': string;
+    'settings.invalidNumber': string;
+    'settings.title': string;
+    'settings.description': string;
+    'settings.baseUrl': string;
+    'settings.baseUrlHint': string;
+    'settings.token': string;
+    'settings.tokenHint': string;
+    'settings.memoryNoteId': string;
+    'settings.memoryNoteIdHint': string;
+    'settings.timeoutMs': string;
+    'settings.timeoutMsHint': string;
+    'settings.autoInject': string;
+    'settings.autoInjectHint': string;
+    'settings.deleteConfirm': string;
+    'settings.deleteConfirmHint': string;
+    'settings.announce': string;
+    'settings.announceHint': string;
+    'settings.enabled': string;
+    'settings.enabledHint': string;
+    'settings.test': string;
+    'settings.testing': string;
+    'settings.testOk': string;
+    'settings.testFail': string;
+    'entry.label': string;
+    'entry.tooltip': string;
+    'panel.searchPlaceholder': string;
+    'panel.searching': string;
+    'panel.noResults': string;
+    'panel.error': string;
+    'panel.loading': string;
+    'panel.empty': string;
+    'panel.back': string;
+    'panel.contentEmpty': string;
+    'panel.notConfigured': string;
+    'panel.openSettings': string;
+};
+/** Locale key union. */
+export type TriliumKey = keyof typeof zh;
