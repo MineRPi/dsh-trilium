@@ -4,6 +4,7 @@
 [![DSH](https://img.shields.io/badge/DSH-%3E%3D0.1.0--rc.6%20%3C0.2.0-5b8def)](https://github.com/deepseek-ai/deepseek-harness)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 ![awesome · DSH plugin](https://awesome-dsh-plugin.com/badge.svg)
+![CI](https://github.com/MineRPi/dsh-trilium/actions/workflows/ci.yml/badge.svg)
 
 DSH Web GUI 的 **Trilium 记忆知识库插件**：通过 ETAPI 把 Trilium 笔记库接入 agent，
 提供记忆读写、笔记管理、全文搜索、周报工作流、附件、日历笔记、备份导入等能力，
@@ -24,6 +25,14 @@ DSH Web GUI 的 **Trilium 记忆知识库插件**：通过 ETAPI 把 Trilium 笔
 - **独立设置卡片**：设置 → 插件 → 可配置（服务器地址、token、记忆目录、行为开关、测试连接）
 - **安全**：配置落盘 `~/.dsh/dsh-trilium.json`（权限 0600），token 不进入 cordis.yml、
   不回显给模型；删除笔记需 confirm 确认（软删进回收站可恢复）
+
+## 验证安装
+
+```sh
+# agent 工具应出现在会话中（或直接问 agent）
+# 连接测试：
+curl -s -o /dev/null -w '%{http_code}\n' http://127.0.0.1:3080/api/dsh-trilium/config
+```
 
 ## 兼容性
 
