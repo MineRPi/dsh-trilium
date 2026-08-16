@@ -4,6 +4,7 @@
 [![DSH](https://img.shields.io/badge/DSH-%3E%3D0.1.0--rc.6%20%3C0.2.0-5b8def)](https://github.com/deepseek-ai/deepseek-harness)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 ![awesome · DSH plugin](https://awesome-dsh-plugin.com/badge.svg)
+![CI](https://github.com/MineRPi/dsh-trilium/actions/workflows/ci.yml/badge.svg)
 
 English | [中文](./README.zh.md)
 
@@ -44,6 +45,14 @@ build approval.
 `trilium_clone` `trilium_attribute` `trilium_attachment` `trilium_calendar`
 `trilium_remember` `trilium_recall` `trilium_weekly_report` `trilium_revisions`
 `trilium_backup` `trilium_export` `trilium_import` `trilium_history`
+
+## Verify after install
+
+```sh
+# the agent tools should be listed in the session (or just ask the agent)
+# connection test:
+curl -s -o /dev/null -w '%{http_code}\n' http://127.0.0.1:3080/api/dsh-trilium/config
+```
 
 ## Requirements
 
