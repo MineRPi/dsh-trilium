@@ -31,7 +31,7 @@ declare module '@deepseek-ai/dsh-client-ui-slots' {
      * (设置 → 插件 → 可配置). Declared here because this package does not
      * depend on the settings-plugins presentation package.
      */
-    'settings.plugin.item': { kind: 'list'; scope: 'root'; owner: SettingsPluginItemOwnerProps }
+    'settings.plugin.item': { kind: 'keyed'; scope: 'root'; owner: SettingsPluginItemOwnerProps }
   }
 }
 
@@ -59,13 +59,15 @@ export function apply(ctx: ClientContext): void {
   // side by side with the built-in cards and third-party cards like 语音输入.
   // Reads/writes the host JSON store directly through the
   // /api/dsh-trilium/config routes (no settings-namespace allowlist needed).
+  // rc7: settings.plugin.item is keyed by the settings namespace; the Host
+  // serves 'dsh-trilium' via installSettingsSection and the plugin-config tab
+  // dispatches this card for that key.
   const disposeSettings = ctx.slots.inject('settings.plugin.item', () => ctx.slots.register({
     name: 'settings.plugin.item',
-    id: 'trilium',
-    order: 120,
+    key: 'dsh-trilium',
     locale: NS,
     inject: (): TriliumSettingsFace => ({ api }),
-  }, TriliumSettingsCard as never))
+  }, TriliumSettingsCard))
 
   // Note browsing is done through the trilium_* agent tools; this client half
   // intentionally mounts only the settings card (no sidebar panel).

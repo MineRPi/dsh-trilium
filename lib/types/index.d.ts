@@ -12,6 +12,8 @@ import z from '@deepseek-ai/schemastery';
 export declare const name = "trilium";
 /** Services required before the Trilium surfaces can mount. */
 export declare const inject: string[];
+/** Settings namespace the browser settings card is keyed by (rc7 keyed slot). */
+export declare const TRILIUM_SETTINGS_NAMESPACE: import("@deepseek-ai/dsh-settings").SettingsNamespace;
 /**
  * Plugin config (cordis.yml). The ETAPI connection (baseUrl/token/memoryNoteId
  * /timeoutMs) and behavior switches (autoInject/deleteConfirm) live in

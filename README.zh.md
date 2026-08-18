@@ -120,7 +120,7 @@ npm test            # node --test tests/
 
 ## 上架状态
 
-- npm：`dsh-trilium@0.1.1` 已发布 ✅
+- npm：`dsh-trilium@0.1.2` 已发布 ✅
 - awesome-dsh-plugin PR：[#1045](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/1045) 已提交，等待合并（收录中）
 - 收录流程：发布 npm → 在 `data/plugins/` 加 YAML 条目 → 运行
   `node scripts/generate-readme.mjs` 生成双 README → 提 PR → 合并后

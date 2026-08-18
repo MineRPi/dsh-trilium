@@ -21,7 +21,7 @@ declare module '@deepseek-ai/dsh-client-ui-slots' {
          * depend on the settings-plugins presentation package.
          */
         'settings.plugin.item': {
-            kind: 'list';
+            kind: 'keyed';
             scope: 'root';
             owner: SettingsPluginItemOwnerProps;
         };

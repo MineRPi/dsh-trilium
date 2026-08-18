@@ -1,6 +1,6 @@
 {
   "name": "dsh-trilium",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "DSH 记忆知识库插件：通过 ETAPI 把 Trilium 笔记库接入 agent（记忆读写/笔记管理/搜索/周报/附件/日历/备份），GUI 提供独立设置页。 · DSH memory-knowledge plugin: connect Trilium to the agent via ETAPI.",
   "type": "module",
   "main": "lib/index.js",
@@ -103,7 +103,8 @@
     "react-dom": "18.2.0",
     "tsdown": "^0.22.0",
     "typescript": "~5.7.2",
-    "@deepseek-ai/dsh-llm": "^0.1.0-rc.7"
+    "@deepseek-ai/dsh-llm": "^0.1.0-rc.7",
+    "@deepseek-ai/dsh-settings": "^0.1.0-rc.7"
   },
   "license": "MIT",
   "keywords": [

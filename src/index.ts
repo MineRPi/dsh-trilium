@@ -8,6 +8,7 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
+import { installSettingsSection, settingsNamespace } from '@deepseek-ai/dsh-settings'
 import z from '@deepseek-ai/schemastery'
 import type {} from '@deepseek-ai/dsh-host-webserver'
 import type {} from '@deepseek-ai/dsh-system-prompt'
@@ -48,6 +49,9 @@ export const name = 'trilium'
 
 /** Services required before the Trilium surfaces can mount. */
 export const inject = ['webServer', 'tools', 'systemPrompt']
+
+/** Settings namespace the browser settings card is keyed by (rc7 keyed slot). */
+export const TRILIUM_SETTINGS_NAMESPACE = settingsNamespace('dsh-trilium')
 
 /**
  * Plugin config (cordis.yml). The ETAPI connection (baseUrl/token/memoryNoteId
@@ -167,6 +171,18 @@ export function apply(ctx: Context, config?: Config): void {
       'dsh-trilium: tools',
     )
   }
+
+  // Register the settings namespace so the rc7 plugin-config tab dispatches
+  // our settings card (settings.plugin.item is keyed by namespace). The actual
+  // connection values live in ~/.dsh/dsh-trilium.json; the card reads/writes
+  // them through the /api/dsh-trilium routes.
+  installSettingsSection(ctx, TRILIUM_SETTINGS_NAMESPACE, Config, config ?? {}, {
+    setSource: (source) => {
+      current = source
+      sync()
+    },
+    onChange: sync,
+  })
 
   sync()
 }

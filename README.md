@@ -70,7 +70,7 @@ npm test
 
 ## Listing status
 
-- npm: `dsh-trilium@0.1.1` published ✅
+- npm: `dsh-trilium@0.1.2` published ✅
 - awesome-dsh-plugin PR: [#1045](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/1045) open (pending merge)
 - Flow: publish to npm → add a YAML entry under `data/plugins/` → run
   `node scripts/generate-readme.mjs` → open a PR → dshmarket picks it up after merge
