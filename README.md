@@ -1,7 +1,7 @@
 # dsh-trilium
 
 [![npm](https://img.shields.io/npm/v/dsh-trilium)](https://www.npmjs.com/package/dsh-trilium)
-[![DSH](https://img.shields.io/badge/DSH-%3E%3D0.1.0--rc.6%20%3C0.2.0-5b8def)](https://github.com/deepseek-ai/deepseek-harness)
+[![DSH](https://img.shields.io/badge/DSH-%3E%3D0.1.0--rc.7%20%3C0.2.0-5b8def)](https://github.com/deepseek-ai/deepseek-harness)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 ![awesome · DSH plugin](https://awesome-dsh-plugin.com/badge.svg)
 ![CI](https://github.com/MineRPi/dsh-trilium/actions/workflows/ci.yml/badge.svg)
@@ -56,7 +56,7 @@ curl -s -o /dev/null -w '%{http_code}\n' http://127.0.0.1:3080/api/dsh-trilium/c
 
 ## Requirements
 
-- DSH `>=0.1.0-rc.6 <0.2.0`, Node `^22.19.0 || >=24.0.0`
+- DSH `>=0.1.0-rc.7 <0.2.0`, Node `^22.19.0 || >=24.0.0`
 - Trilium with ETAPI enabled (TriliumNext 0.10x+ or classic Trilium)
 
 ## Development
@@ -70,7 +70,7 @@ npm test
 
 ## Listing status
 
-- npm: `dsh-trilium@0.1.0` published ✅
+- npm: `dsh-trilium@0.1.1` published ✅
 - awesome-dsh-plugin PR: [#1045](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/1045) open (pending merge)
 - Flow: publish to npm → add a YAML entry under `data/plugins/` → run
   `node scripts/generate-readme.mjs` → open a PR → dshmarket picks it up after merge
