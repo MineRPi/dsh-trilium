@@ -1,7 +1,7 @@
 # dsh-trilium
 
 [![npm](https://img.shields.io/npm/v/dsh-trilium)](https://www.npmjs.com/package/dsh-trilium)
-[![DSH](https://img.shields.io/badge/DSH-%3E%3D0.1.0--rc.6%20%3C0.2.0-5b8def)](https://github.com/deepseek-ai/deepseek-harness)
+[![DSH](https://img.shields.io/badge/DSH-%3E%3D0.1.0--rc.7%20%3C0.2.0-5b8def)](https://github.com/deepseek-ai/deepseek-harness)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 ![awesome · DSH plugin](https://awesome-dsh-plugin.com/badge.svg)
 ![CI](https://github.com/MineRPi/dsh-trilium/actions/workflows/ci.yml/badge.svg)
@@ -36,7 +36,7 @@ curl -s -o /dev/null -w '%{http_code}\n' http://127.0.0.1:3080/api/dsh-trilium/c
 
 ## 兼容性
 
-- DSH：`>=0.1.0-rc.6 <0.2.0`（Profile Bundle + 嵌套 `dsh.client` 契约）
+- DSH：`>=0.1.0-rc.7 <0.2.0`（Profile Bundle + 嵌套 `dsh.client` 契约）
 - Node.js：`^22.19.0 || >=24.0.0`
 - Trilium：ETAPI 服务（TriliumNext 0.10x+，普通 Trilium 亦可）
 
@@ -120,7 +120,7 @@ npm test            # node --test tests/
 
 ## 上架状态
 
-- npm：`dsh-trilium@0.1.0` 已发布 ✅
+- npm：`dsh-trilium@0.1.1` 已发布 ✅
 - awesome-dsh-plugin PR：[#1045](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/1045) 已提交，等待合并（收录中）
 - 收录流程：发布 npm → 在 `data/plugins/` 加 YAML 条目 → 运行
   `node scripts/generate-readme.mjs` 生成双 README → 提 PR → 合并后
